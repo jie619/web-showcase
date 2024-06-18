@@ -1,0 +1,1211 @@
+@import 'compass'
+
+@mixin transition($transition)
+  -moz-transition: $transition
+  -webkit-transition: $transition
+  -ms-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+
+@mixin animation($animation)
+  animation: $animation
+  -moz-animation: $animation
+  -webkit-animation: $animation
+
+@mixin transform($transform)
+  -moz-transform: $transform
+  -webkit-transform: $transform
+  -o-transform: $transform
+  -ms-transform: $transform
+  transform: $transform
+
+@mixin background-size($background-size)
+  -moz-background-size: $background-size
+  -webkit-background-size: $background-size
+  -o-background-size: $background-size
+  background-size: $background-size
+
+@mixin box-sizing($box-sizing)
+  -webkit-box-sizing: $box-sizing
+  -moz-box-sizing: $box-sizing
+  box-sizing: $box-sizing
+
+$width-phone: 480px
+$width-pad: 992px
+
+body
+  max-width: 1450px
+  min-width: 320px
+  margin: 0 auto
+  overflow-x: hidden
+  font-family: Arial, '微軟正黑體'
+
+//Loading畫面
+.loading
+  width: 100%
+  height: 100%
+  position: fixed
+  left: 0
+  right: 0
+  background: #fff
+  z-index: 9999
+  .internal
+    display: none
+  .logo-image
+    width: 100%
+    position: absolute
+    top: calc(50% - 35px)
+    .container
+      width: 0
+      margin: 0 auto
+      position: relative
+      display: table
+      .overlay
+        width: 100%
+        height: 71px
+        left: 0
+        position: absolute
+        background: #fff
+        +animation(overlay 4s linear forwards)
+      img
+        width: 254px
+  .wrapper
+    top: 50%
+    left: calc(50% - 190px)
+    opacity: 0
+    +animation(wrapper 3.3s linear)
+@media screen and (max-width: 700px)
+  .loading
+    .logo-image
+      top: calc(50% - 25px)
+    .wrapper
+      top: 50%
+      left: 50%
+      +animation(wrapper 1.8s linear)
+
+//文字出現
+@-moz-keyframes overlay
+  40%
+    +transform(translateX(0))
+  70%
+    +transform(translateX(100%))
+  100%
+    +transform(translateX(100%))
+
+@-webkit-keyframes overlay
+  40%
+    +transform(translateX(0))
+  70%
+    +transform(translateX(100%))
+  100%
+    +transform(translateX(100%))
+
+@keyframes overlay
+  40%
+    +transform(translateX(0))
+  70%
+    +transform(translateX(100%))
+  100%
+    +transform(translateX(100%))
+
+//圓點移動消失
+@-moz-keyframes wrapper
+  0%
+    opacity: 1
+  65%
+    opacity: 1
+  100%
+    opacity: 0
+
+@-webkit-keyframes wrapper
+  0%
+    opacity: 1
+  65%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes wrapper
+  0%
+    opacity: 1
+  65%
+    opacity: 1
+  100%
+    opacity: 0
+
+//手機版頂層
+.phone-header
+  width: 100%
+  height: 70px
+  position: relative
+  display: none
+  background: #fff
+  img
+    width: 200px
+    padding: 10px
+  .nav-button
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 15px
+    right: 20px
+    z-index: 100
+    cursor: pointer
+    img
+      width: 20px
+      padding: 0
+  .float
+    display: none
+  .float-button
+    width: 30px
+    height: 30px
+    position: fixed
+    top: 50px
+    right: 20px
+    display: block
+    text-align: center
+    background: rgba(0, 0, 0, 0.6)
+    img
+      padding-top: 5px
+@media screen and (max-width: $width-pad)
+  .phone-header
+    display: block
+@media screen and (max-width: $width-phone)
+  .phone-header
+    img
+      width: 140px
+      padding: 8px 10px
+    .nav-button
+      top: 15px
+      right: 5%
+    .float-button
+      right: 5%
+
+//左側選單
+.nav
+  position: fixed
+  left: 10px
+  top: 20%
+  z-index: 9998
+  display: none
+  .close
+    position: absolute
+    top: 20px
+    right: 20px
+    display: none
+    cursor: pointer
+  .floor-button
+    height: 21px
+    margin-bottom: 10px
+    padding: 2px 10px
+    position: relative
+    cursor: pointer
+    font-size: 16px
+    display: table
+    .floor-line
+      width: 20px
+      height: 1px
+      position: absolute
+      top: 12px
+      left: -20px
+      display: none
+      background: #004093
+    .name
+      display: none
+  .floor-button:hover
+    background: #fff
+    .number
+      display: none
+    .name
+      display: block
+  .active,.active:hover
+    background: #004093
+    .floor-line
+      display: block
+    .number
+      display: none
+    .name
+      display: block
+      color: #fff
+  .floor-index
+    display: none
+  .floor-dm
+    .phone-name
+      display: none
+  .dm-button,.top
+    .number,.name
+      line-height: 23px
+  .top
+    cursor: pointer
+.nav-active
+  display: block
+@media screen and (max-width: $width-pad)
+  .nav
+    width: 100%
+    height: 100%
+    top: 0
+    left: auto
+    right: 0
+    display: none
+    align-items: center
+    justify-content: center
+    background: rgba(0, 0, 0, 0.8)
+    color: #fff
+    .close
+      display: block
+    .all-floor-button
+      display: table
+    .floor-button
+      margin-bottom: 15px
+      font-size: 20px
+      .name
+        margin-left: 10px
+        display: inline-block
+    .floor-button:hover
+      background: none
+      .number,.name
+        display: inline-block
+    .active,.active:hover
+      background: none
+      .floor-line
+        display: none
+      .number
+        display: inline-block
+    .floor-index
+      margin-bottom: 21px
+      display: block
+      a
+        text-decoration: none
+        color: #fff
+    .floor-dm,.floor-dm:hover
+      .number,.name
+        display: none
+      .phone-name
+        display: block
+    .top
+      display: none
+  .nav-active
+    display: none
+  .phone-nav-open
+    display: flex
+  .phone-nav-close
+    display: none
+@media screen and (max-width: 360px)
+  .nav
+    .floor-button
+      margin-bottom: 10px
+    .floor-index
+      margin-bottom: 16px
+
+//標頭活動訊息
+.header
+  width: 100%
+  text-align: center
+  font-size: 16px
+  visibility: hidden
+  background: #004093
+  color: #fff
+  a
+    padding: 10px 0
+    display: block
+    text-decoration: none
+    color: #fff
+@media screen and (max-width: $width-pad)
+  .header
+    position: fixed
+    bottom: 0
+    z-index: 9998
+    display: none
+  .header-open
+    display: block
+@media screen and (max-width: $width-phone)
+  .header
+    font-size: 14px
+
+.slick-dots 
+  li 
+    button:before
+      font-size: 35px
+      opacity: 1
+  .slick-active
+    button
+      border-radius: 50%
+      border: 1px solid #000
+    button:before
+      font-size: 28px
+@media screen and (max-width: $width-pad)
+  .slick-dots 
+    li 
+      margin: 0 10px
+
+//Banner
+.all
+  display: none
+  background: #fff
+  .banner
+    width: 1220px
+    padding-bottom: 80px
+    margin: 0 auto
+    position: relative
+    .carousel
+      .slick-dots
+        bottom: -30px
+      .item
+        position: relative
+        outline: none
+        a
+          outline: none
+          text-decoration: none
+          color: #fff
+        img
+          width: 100%
+        .font
+          position: absolute
+          z-index: 110
+          top: 150px
+          left: 50px
+          display: table
+          color: #fff
+          .title
+            padding-bottom: 5px
+            font-size: 45px
+          .subtitle
+            padding-bottom: 10px
+            font-size: 25px
+          .content
+            padding-bottom: 10px
+            font-size: 16px
+          .shop
+            margin-top: 40px
+            padding: 5px 10px
+            font-size: 16px
+            text-decoration: none
+            outline: none
+            line-height: 150px
+            border: 1px solid #fff
+            background: #fff
+            color: #000
+            +transition(all 0.5s)
+          .shop:hover
+            border: 1px solid #fff
+            background: none
+            color: #fff  
+        .phone-font
+          width: 100%
+          padding: 10px 20px
+          position: absolute
+          bottom: 0
+          display: none
+          font-size: 16px
+          background: rgba(0, 64, 147, 0.7)
+          color: #fff
+          span
+            margin-right: 10px
+            font-size: 25px
+    .background
+      width: 451px
+      height: 572px
+      position: absolute
+      top: 0
+      background-image: url('../images/bg.png')
+      background-repeat: no-repeat
+      img
+        padding: 25px 0 0 50px
+  .phone-banner
+    display: none
+.display
+  display: block
+@media screen and (max-width: 1240px)
+  .all
+    .banner
+      width: 100%
+@media screen and (max-width: $width-pad)
+  .all
+    .banner
+      padding-bottom: 30px
+      .carousel
+        .slick-dots
+          bottom: -30px
+        .item
+          .font
+            display: none
+          .phone-font
+            display: block
+            font-size: 20px
+            span
+              font-size: 20px 
+      .background
+        display: none
+    .desktop-banner
+      display: none
+    .phone-banner
+      display: block
+@media screen and (max-width: $width-phone)
+  .all
+    .banner
+      .carousel
+        .item
+          .phone-font
+            padding: 10px 5px
+            font-size: 14px
+            span
+              margin-right: 5px
+              font-size: 14px
+
+//TAG搜尋
+.search
+  position: relative
+  background: #fff
+  .scroll
+    margin: 0 auto
+    padding: 0 20px
+    display: table
+    cursor: pointer
+    text-align: center
+    .icon-scroll
+      width: 40px
+      height: 70px
+      position: relative
+      border-radius: 25px
+      border: 2px solid #000
+      +transform(scale(0.5))
+    .icon-scroll:before
+      content: ''
+      width: 8px
+      height: 8px
+      position: absolute
+      top: 15px
+      left: 16px
+      border-radius: 4px
+      background: #000
+      +animation(scroll 1.5s infinite)
+  .scroll-line
+    width: 1px 
+    height: 30px
+    margin: 0 auto
+    background: #686565
+  .search-tag
+    width: 330px
+    height: 260px
+    padding: 0 20px
+    position: absolute
+    top: -155px
+    right: 0
+    +box-sizing(border-box)
+    opacity: 0.9
+    background: #004093
+    .title
+      padding-top: 45px
+      text-align: center
+      font-size: 30px
+      color: #fff
+    .tag
+      padding-top: 15px
+      text-align: center
+      line-height: 30px
+      font-size: 16px
+      color: #fff
+      span
+        margin: 0 7px
+        display: inline-block
+      span
+        cursor: pointer
+    .search-form
+      padding-top: 10px
+      text-align: center
+      img
+        margin-right: 5px
+        position: relative
+        top: 8px
+        cursor: pointer
+      .button
+        width: 75px
+        padding: 7px 15px
+        font-size: 16px
+        outline: none
+        border: none
+        cursor: pointer
+        display: none
+        background: #000
+        color: #fff
+      input 
+        width: 200px
+        height: 26px
+        font-size: 16px
+        text-align: center
+        border-radius: 0
+        border: none
+        outline: none
+      input::-webkit-input-placeholder
+        color: #004093
+      input::-moz-placeholder 
+        color: #004093
+      input:-ms-input-placeholder 
+        color: #004093
+      input:-moz-placeholder 
+        color: #004093
+@media screen and (max-width: $width-pad)
+  .search
+    .scroll,.scroll-line
+      display: none
+    .search-tag
+      width: 60%
+      height: auto
+      margin: 0 auto
+      padding: 0
+      position: static
+      background: none
+      .title,.tag
+        display: none
+      .search-form
+        padding: 10px 0 0 0
+        img
+          display: none
+        .button
+          display: inline-block
+        input
+          width: calc(100% - 100px)
+          margin-bottom: 10px
+          border: 1px solid #b9b9b9
+        input::-webkit-input-placeholder
+          color: #000
+        input::-moz-placeholder 
+          color: #000
+        input:-ms-input-placeholder 
+          color: #000
+        input:-moz-placeholder 
+          color: #000
+@media screen and (max-width: $width-phone)
+  .search
+    .search-tag
+      width: 90%
+
+@-moz-keyframes scroll
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    +transform(translateY(25px))
+
+@-webkit-keyframes scroll
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    +transform(translateY(25px))
+
+@keyframes scroll
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    +transform(translateY(25px))
+
+//DM同步
+.dm
+  padding: 50px 100px 30px 0
+  overflow: auto
+  background: #e5e5e5
+  .dm-cover
+    width: 50%
+    float: left
+    .title
+      margin-left: 220px
+      font-size: 38px
+      letter-spacing: 5px
+      border-bottom: 1px solid #000
+      .more
+        padding: 25px 20px 0 0
+        float: right
+        text-decoration: none
+        font-size: 14px
+        color: #000
+    .image
+      height: 380px
+      margin: 15px 80px 0 0
+      padding-top: 70px
+      text-align: center
+      background: #b1d2d4
+      img
+        padding: 15px
+        background: #fff
+  .dm-product
+    width: 50%
+    float: left
+    .block
+      width: calc(50% - 15px) 
+      height: 250px
+      margin: 7.5px
+      padding: 40px 0 20px 0
+      text-align: center
+      float: left
+      background: #fff
+      a
+        text-decoration: none
+        outline: none
+        color: #000
+        img
+          width: 135px
+          height: 135px
+          margin: 0 auto 20px auto
+          +transition(all 0.5s)
+        .Ceud_Prm_Title
+          display: none
+        .Ceud
+          margin-bottom: 15px 
+          padding: 0 10px
+          font-size: 16px
+          line-height: 25px
+          word-break: break-all
+          overflow: hidden
+        .Price_all
+          text-align: center
+          font-size: 14px
+          color: #b41c22
+          .Price
+            font-size: 18px
+      a:hover
+        img
+          +transform(scale(1.1))
+  .phone-more
+    display: none
+@media screen and (max-width: 1240px)
+  .dm
+    padding: 30px 30px 30px 0
+    .dm-cover
+      .title
+        margin-left: 120px
+@media screen and (max-width: $width-pad)
+  .dm 
+    padding: 30px 0
+    .dm-cover
+      width: 100%
+      float: none
+      .title
+        width: 80%
+        margin: 0 auto
+        font-size: 30px
+        .more
+          padding: 20px 20px 0 0
+          display: none
+      .image
+        display: none
+    .dm-product
+      width: 80%
+      margin: 30px auto 0 auto
+      float: none
+      overflow: auto
+    .phone-more
+      margin-top: 30px
+      display: block
+      text-align: center
+      a
+        padding: 8px 15px
+        text-decoration: none
+        background: #000
+        color: #fff
+@media screen and (max-width: 650px)
+  .dm
+    .dm-product
+      .block
+        a
+          .Ceud
+            height: 50px
+@media screen and (max-width: $width-phone)
+  .dm 
+    .dm-cover
+      .title
+        width: 90%
+    .dm-product
+      width: 90%
+      .block
+        width: calc(50% - 10px)
+        margin: 5px
+        a
+          img
+            width: 110px
+            height: 110px
+
+//百貨圖片
+.photo
+  width: 100%
+  height: 500px
+  position: relative
+  .carousel
+    .item
+      width: 100%
+      height: 500px
+      background-position: center center
+      background-repeat: no-repeat
+      background-attachment: fixed
+      +background-size(cover)
+@media screen and (max-width: $width-pad)
+  .photo
+    display: none
+
+//樓層
+.floor
+  .sort
+    width: 100%
+    padding: 150px 0 0 100px
+    overflow: auto
+    position: relative
+    +box-sizing(border-box)
+    background: #fff
+    .sort-image
+      width: 25%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 100
+      img
+        width: 100%
+    .chop
+      width: calc(50% - 100px)
+      padding-bottom: 40px
+      position: relative
+      float: left
+      border-left: 1px solid #000
+      .sort-line
+        width: 160px
+        height: 1px
+        position: absolute
+        top: 85px
+        left: 22%
+        z-index: 100
+        background: #000
+      .sort-title
+        width: 60%
+        padding: 45px 35px 50px 40px
+        float: right
+        +box-sizing(border-box)
+        border: 1px solid #000
+        .umber
+          margin-bottom: 10px
+          font-size: 30px
+        .title-name
+          margin-bottom: 15px
+          font-size: 32px
+          letter-spacing: 5px
+        .tag
+          line-height: 30px
+          font-size: 14px
+          span
+            margin-right: 5px
+      .chop-block
+        width: 100%
+        margin-top: 30px
+        float: left
+        .font
+          width: 80px
+          height: 310px
+          padding-left: 20px
+          -moz-writing-mode: vertical-lr
+          -webkit-writing-mode: vertical-lr
+          -o-writing-mode: vertical-lr
+          writing-mode: vertical-lr
+          writing-mode: tb-lr
+          float: left
+          font-size: 30px
+        .logo
+          width: calc(100% - 100px)
+          float: left
+          a
+            height: 100%
+            display: block
+            text-decoration: none
+            color: #000
+          .left
+            border-left: 1px solid #d8d8d8
+          .bottom
+            border-bottom: 1px solid #d8d8d8
+          .logo-block
+            width: 33%
+            height: 58px
+            position: relative
+            float: left
+            display: table
+            font-size: 14px
+            line-height: 58px
+            text-align: center
+            +box-sizing(border-box)
+            border-right: 1px solid #d8d8d8
+            border-top: 1px solid #d8d8d8
+            +transition(all 0.2s)
+            .logo-line
+              width: 0
+              height: 1px
+              position: absolute
+              bottom: 2px
+              left: 0
+              background: #fff
+              +transition(all 0.5s)
+          .logo-block:hover
+            background: #004093
+            .logo-line
+              width: 100%
+            a
+              color: #fff
+        .three-logo
+          .logo-block
+            height: 58px
+            line-height: 58px
+        .button
+          margin-top: 20px
+          cursor: pointer
+          text-align: center
+          float: right
+          border: 1px solid #000
+          +transition(all 0.2s)
+          a
+            padding: 5px 10px
+            display: block
+            text-decoration: none
+            color: #000
+        .button:hover
+          border: 1px solid #000
+          background: #000
+          color: #fff
+          a
+            color: #fff
+        .modal
+          width: 60%
+          padding: 70px 100px
+          position: fixed
+          bottom: 50px
+          left: calc(20% - 100px)
+          z-index: 9998
+          display: none
+          background: rgba(0, 64, 147, 0.9)
+          color: #fff
+          .remove
+            position: absolute
+            top: 25px
+            right: 30px
+            cursor: pointer
+            img
+              width: 20px
+          .title
+            padding: 0 0 10px 35px
+            font-size: 35px
+            border-bottom: 1px solid #fff
+          .category
+            padding: 50px 0 0 35px
+            .subtitle
+              padding-bottom: 15px
+              font-size: 30px
+            .tag
+              .modal-button
+                margin: 10px 1px 0 1px
+                padding: 5px 10px
+                display: inline-block
+                font-size: 16px
+                text-decoration: none
+                border: 1px solid #004093
+                background: #fff
+                color: #004093
+                +transition(all 0.5s)
+              .modal-button:hover
+                background: none
+                border: 1px solid #fff
+                color: #fff
+    .product-block
+      width: calc(50% - 30px)
+      position: relative
+      float: left
+      .commodity
+        padding: 40px 0 0 40px
+        .slick-list
+          border-left: 1px solid #d8d8d8
+          border-right: 1px solid #d8d8d8
+        .slick-arrow
+          width: 34px
+          height: 34px
+          top: auto
+          bottom: -15px
+          right: -45px
+          left: auto
+          text-align: center
+          background: #cfd4d4
+          img
+            width: 15px
+            height: 29px
+        .slick-next 
+          bottom: -60px
+        .slick-disabled
+          visibility: hidden
+        .block
+          height: 360px
+          padding: 60px 0 40px 0
+          text-align: center
+          outline: none
+          +box-sizing(border-box)
+          border-right: 1px solid #d8d8d8
+          a
+            text-decoration: none
+            outline: none
+            color: #000
+            img
+              width: 135px
+              height: 135px
+              margin: 0 auto 20px auto
+              +transition(all 0.5s)
+            .Ceud
+              margin-bottom: 15px 
+              padding: 0 10px
+              font-size: 16px
+              line-height: 25px
+              word-break: break-all
+              overflow: hidden
+            .Price_all
+              text-align: center
+              font-size: 14px
+              color: #b41c22
+              .Price
+                font-size: 18px
+          a:hover
+            img
+              +transform(scale(1.1))
+    .commodity-line
+      width: 100px
+      height: 1px
+      margin-top: 250px
+      float: right
+      background: #000
+  .visualization
+    width: 100%
+    height: 400px
+    background-position: center center
+    background-repeat: no-repeat
+    background-attachment: fixed
+    +background-size(cover)
+@media screen and (max-width: 1366px)
+  .floor
+    .sort
+      padding: 120px 0 0 100px
+      .sort-image
+        width: 20%
+      .chop
+        .sort-line
+          left: 8%
+        .sort-title
+          width: 70%
+          padding: 45px 35px 50px 30px
+          .title-name
+            font-size: 32px
+        .chop-block
+          .font
+            height: 280px
+            font-size: 27px
+      .product-block
+        .commodity
+          .block
+            a
+              img
+                width: 110px
+                height: 110px
+@media screen and (max-width: 1240px)
+  .floor  
+    .sort
+      padding: 100px 0 0 60px
+      .chop
+        width: calc(50% - 50px)
+        .sort-line
+          width: 100px
+          top: 65px
+          left: 16%
+        .sort-title
+          padding: 25px 30px 20px 40px
+        .chop-block
+          .font
+            width: 40px
+            padding-left: 15px
+          .logo
+            width: calc(100% - 55px)
+          .modal
+            padding: 70px 50px
+            left: calc(20% - 50px)
+            .title
+              padding: 0 0 10px 15px
+            .category
+              padding: 50px 0 0 15px
+      .product-block
+        width: calc(50% + 10px)
+        .commodity
+          padding: 40px 0 0 20px
+          .slick-arrow
+            right: -30px
+      .commodity-line
+        width: 30px
+@media screen and (max-width: $width-pad)
+  .floor
+    .floor-frame
+      width: 100%
+      height: 200px
+      position: relative
+      .floor-images
+        width: 100%
+        height: 500px
+        position: absolute
+        bottom: -100px
+        z-index: -2
+        background-position: center bottom
+        background-repeat: no-repeat
+        +background-size(cover)
+        +transition(all 1.0s ease-out)
+    .sort
+      width: 100%
+      height: auto
+      padding: 50px 0
+      float: none
+      +transition(all 0.5s ease-out)
+      .sort-image
+        img
+          display: none
+      .chop
+        width: 100%
+        float: none
+        overflow: auto
+        border-left: none
+        .sort-line
+          display: none
+        .sort-title
+          width: 80%
+          margin: 0 auto
+          padding: 0
+          float: none
+          border: none
+          .umber,.tag
+            display: none
+          .title-name
+            font-size: 30px
+        .chop-block
+          position: relative
+          .font
+            display: none
+          .logo
+            width: 80%
+            margin: 0 auto
+            float: none
+            overflow: auto
+            .logo-block
+              width: calc(33.3333333% - 1.5px)
+          .button
+            margin-top: 0
+            position: absolute
+            top: -50px
+            right: 10%
+            float: none
+          .modal
+            width: 90%
+            padding: 20px 20px
+            left: calc(5% - 20px)
+            .category
+              .tag
+                .modal-button
+                  margin: 10px 0 0 0
+                  padding: 2px 5px
+                  font-size: 14px
+      .product-block
+        width: calc(80% + 20px)
+        margin: 0 auto
+        float: none
+        .commodity
+          padding: 0
+          .slick-arrow
+            top: 50%
+            right: -35px
+            bottom: auto
+          .slick-prev
+            left: -35px
+            right: auto
+          .slick-disabled
+            opacity: 0.9
+            display: inline-block
+            visibility: visible
+            background: #a5a5a5
+          .block
+            a
+              img
+                width: 135px
+                height: 135px
+      .commodity-line
+        display: none
+    .visualization
+      display: none
+@media screen and (max-width: $width-phone)
+  .floor
+    .floor-frame
+      height: 250px
+      .floor-images
+        width: 100%
+    .sort
+      padding: 50px 0 100px 0
+      overflow: visible
+      .chop
+        .sort-title
+          width: 90%
+        .chop-block
+          .logo
+            width: 90%
+            .logo-block
+              width: 32.9%
+              font-size: 12px
+          .button
+            right: 5%
+          .modal
+            width: 90%
+            padding: 20px 10px
+            left: calc(5% - 10px)
+            .title
+              padding: 0 0 10px 10px
+              font-size: 25px
+            .category
+              padding: 20px 0 0 10px
+              .subtitle
+                font-size: 20px
+              .tag
+                .modal-button
+                  margin: 10px 0 0 0
+                  padding: 2px 5px
+                  font-size: 12px
+      .product-block
+        width: calc(90% + 10px)
+        .commodity
+          .slick-arrow
+            top: 115%
+          .slick-prev
+            left: calc(50% - 36px)
+          .slick-next
+            right: calc(50% - 36px)
+          .block
+            a
+              img
+                width: 110px
+                height: 110px
+@media screen and (max-width: 360px)
+  .floor
+    .sort
+      .chop
+        .chop-block
+          .logo
+            .no-left
+              border-left: none
+            .no-bottom
+              border-bottom: none
+            .phone-left
+              border-left: 1px solid #d8d8d8
+            .logo-block
+              width: calc(50% - 1.5px)
+              height: 40px
+              line-height: 40px
+          .three-logo
+            .logo-block
+              width: calc(100% - 2.5px)
+              height: 40px
+              line-height: 40px
+
+.phone-bottom
+  @media screen and (max-width: $width-pad)
+    width: 100%
+    height: 40px

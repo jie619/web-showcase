@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link rel="icon" href="icon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="icon/favicon.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon" sizes="any">
+    <link rel="apple-touch-icon" href="icon/favicon.png" sizes="192x192">
+    <title>百貨X購物網</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+  
+    <!-- 運用在區塊出現動畫 -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- 滑動效果的樣式 -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <!-- Loading畫面 -->
+    <link href="css/loading-style.css" rel="stylesheet">
+    <!-- 主要 -->
+    <link href="css/main.css" rel="stylesheet">
+
+  </head>
+<body>
+
+  <!-- Loading畫面 -->
+  <div class="loading">
+    <div class="internal">
+      <div class="logo-image">
+        <div class="container">
+          <div class="overlay"></div>
+          <img src="images/loading-logo.png">
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="line line1">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line2">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line3">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line4">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line5">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line6">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line7">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+        <div class="line line8">
+          <span class="circle circle-top"></span>
+          <div class="dotted">
+            <span class="dot dot-middle-top"></span>
+            <span class="dot dot-middle-bottom"></span>
+          </div>
+          <span class="circle circle-bottom"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手機版頂層 -->
+  <div class="phone-header">
+    <a href="javascript:void(0)" title="前往購物網"><img src="images/logo.png"></a>
+    <div class="nav-button">
+      <img src="images/nav.png">
+    </div>
+    <div class="nav-button float">
+      <img src="images/nav-float.png">
+    </div>
+  </div>
+
+  <!-- 左側選單 -->
+  <div class="nav">
+    <div class="close"><img src="images/mcross.png"></div>
+    <div class="all-floor-button">
+      <div class="floor-button floor-index">
+        <span class="phone-name">
+          <a href="javascript:void(0)" title="前往購物網">購物網</a>
+        </span>
+      </div>
+      <div class="floor-button floor-dm dm-button" data-href="dm">
+        <div class="floor-line"></div>
+        <span class="number">DM</span>
+        <span class="name">DM</span>
+        <span class="phone-name">DM同步</span>
+      </div>
+      <div class="floor-button floor-makeup" data-href="makeup">
+        <div class="floor-line"></div>
+        <span class="number">01</span>
+        <span class="name">化妝品</span>
+      </div>
+      <div class="floor-button floor-fashions" data-href="fashions">
+        <div class="floor-line"></div>
+        <span class="number">02</span>
+        <span class="name">名品</span>
+      </div>
+      <div class="floor-button floor-clothing" data-href="clothing">
+        <div class="floor-line"></div>
+        <span class="number">03</span>
+        <span class="name">服飾/配件</span>
+      </div>
+      <div class="floor-button floor-sport" data-href="sport">
+        <div class="floor-line"></div>
+        <span class="number">04</span>
+        <span class="name">男裝/休運</span>
+      </div>
+      <div class="floor-button floor-kids" data-href="kids">
+        <div class="floor-line"></div>
+        <span class="number">05</span>
+        <span class="name">婦幼親子</span>
+      </div>
+      <div class="floor-button floor-homeneeds" data-href="homeneeds">
+        <div class="floor-line"></div>
+        <span class="number">06</span>
+        <span class="name">3C/家用</span>
+      </div>
+      <div class="floor-button floor-food" data-href="food">
+        <div class="floor-line"></div>
+        <span class="number">07</span>
+        <span class="name">食品/Jasons</span>
+      </div>
+      <div class="top js-top">
+        <div class="floor-line"></div>
+        <span class="number">TOP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 標頭活動訊息 -->
+  <div class="header wow fadeInDown" data-wow-delay="0.4s">
+    <a href="javascript:void(0)">→ 04/26-05/06 全站免運 滿仟送佰 消費滿999加贈限量禮</a>
+  </div>
+
+  <!-- Banner -->
+  <div class="all wow fadeInDown" data-wow-delay="0.4s">
+    <!-- 電腦版 -->
+    <div class="banner desktop-banner">
+      <div class="carousel">
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner1.jpg">
+            <div class="font">
+              <div class="title">聯名限定系列</div>
+              <div class="subtitle">4/28搶先全球開賣</div>
+              <a href="javascript:void(0)" class="shop">SHOP NOW</a>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner2.jpg">
+            <div class="font">
+              <div class="title">化妝品專屬優惠</div>
+              <div class="subtitle">滿仟送佰 滿999元再送限量禮</div>
+              <a href="javascript:void(0)" class="shop">SHOP NOW</a>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner3.jpg">
+            <div class="font">
+              <div class="title">專櫃廚具特企</div>
+              <div class="subtitle">滿仟送佰 滿999元再送限量禮</div>
+              <a href="javascript:void(0)" class="shop">SHOP NOW</a>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner4.jpg">
+            <div class="font">
+              <div class="title">人氣餐廳</div>
+              <div class="subtitle">套餐獨享8折起</div>
+              <a href="javascript:void(0)" class="shop">SHOP NOW</a>
+            </div>
+          </a>
+        </div>
+      </div> 
+      <div class="background">
+        <a href="javascript:void(0)" title="前往購物網"><img src="images/banner/banner-logo.png"></a>
+      </div>
+    </div>
+    <!-- 手機版 -->
+    <div class="banner phone-banner">
+      <div class="carousel">
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner1-mobile.jpg">
+            <div class="phone-font">
+              <span>4/28搶先全球開賣</span>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner2-mobile.jpg">
+            <div class="phone-font">
+              <span>化妝品專屬優惠</span>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner3-mobile.jpg">
+            <div class="phone-font">
+              <span>專櫃廚具特企</span>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="javascript:void(0)">
+            <img src="images/banner/banner4-mobile.jpg">
+            <div class="phone-font">
+              <span>人氣餐廳 套餐獨享8折起</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAG搜尋 -->
+  <div class="search">
+    <div class="scroll wow fadeInDown" data-wow-delay="0.8s">
+      <div class='icon-scroll'></div>
+    </div>
+    <div class="scroll-line wow fadeInDown" data-wow-delay="1.0s"></div>
+    <div class="search-tag wow fadeInDown" data-wow-delay="0.8s">
+      <div class="title">熱門品牌</div>
+      <div class="tag">
+        <span data-id="makeup">KOSE</span>
+        <span data-id="fashions">Gloria</span>
+        <span data-id="clothing">PLAYBOY</span>
+        <span data-id="sport">Crocodile</span>
+        <span data-id="kids">施巴</span>
+        <span data-id="homeneeds">佳醫</span>
+        <span data-id="food">JASONS</span>
+      </div>
+      <div class="search-form">
+        <input type="text" class="search-input" placeholder="品牌搜尋">
+        <img src="images/search.png" class="search-button">
+        <button class="button search-button">search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DM同步 -->
+  <div class="dm" id="dm">
+    <div class="dm-cover">
+      <div class="title">
+        DM同步
+        <a href="javascript:void(0)" class="more">more</a>
+      </div>
+      <!-- DM圖片 -->
+      <div class="image">
+        <a href="javascript:void(0)"><img src="images/dm/dm.jpg"></a>
+      </div>
+    </div>
+    <!-- DM產品 -->
+    <div class="dm-product">
+      
+      <div class="block">
+          <a href="javascript:void(0)">
+              <img class="_img" src="images/dm/product.jpg" border="0" alt="">
+              <div class="Ceud">【KIEHL’S】高效緊緻保濕組</div>
+              <span class="Price_all">特價<b class="Price">3600</b></span>
+          </a>
+      </div>
+      <div class="block">
+          <a href="javascript:void(0)">
+              <img class="_img" src="images/dm/product.jpg" border="0" alt="">
+              <div class="Ceud">【KOSE】SportsBeauty防禦組</div>
+              <span class="Price_all">特價<b class="Price">500</b></span>
+          </a>
+      </div>
+      <div class="block">
+          <a href="javascript:void(0)">
+              <img class="_img" src="images/dm/product.jpg" border="0" alt="">
+              <div class="Ceud">【CUMAR】輕量牛皮兩用包+皮夾</div>
+              <span class="Price_all">特價<b class="Price">2980</b></span>
+          </a>
+      </div>
+      <div class="block">
+          <a href="javascript:void(0)">
+              <img class="_img" src="images/dm/product.jpg" border="0" alt="">
+              <div class="Ceud">【GUCCI】墨鏡</div>
+              <span class="Price_all">特價<b class="Price">5980</b></span>
+          </a>
+      </div>
+                                             
+    </div>
+    <div class="phone-more">
+      <a href="javascript:void(0)">更多商品</a>
+    </div>
+  </div>
+    
+  <!-- 百貨圖片 -->
+  <div class="photo">
+    <div class="carousel">
+      <div class="item" style="background-image: url('images/photo/photo-exterior.jpg')"></div>
+      <div class="item" style="background-image: url('images/photo/photo-toilet1.jpg')"></div>
+      <div class="item" style="background-image: url('images/photo/photo-toilet2.jpg')"></div>
+    </div>
+  </div>
+
+  <!-- 化妝品 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor1-image" style="background-image: url('images/floor1/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="makeup" 
+         data-index="sk-II shiseido kose clinique biotherm elizabeth arden bobbi brown lancome glamglow kanebo 宏亞香水"></div>
+    <div class="sort sort-first">
+      <div class="sort-image"><img src="images/floor1/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">01</div>
+          <div class="title-name">化妝品</div>
+          <div class="tag">
+            <span>美肌養成，全方位守護您的美肌，讓您由內美到外！</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">Makeup & Skin Care</div>
+          <div class="logo">
+            <div class="logo-block left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多SK-II商品">SK-II</a>
+            </div>
+            <div class="logo-block">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多SHISEIDO商品">SHISEIDO</a>
+            </div>
+            <div class="logo-block phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多KOSE商品">KOSE</a>
+            </div>
+            <div class="logo-block left bottom no-bottom no-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多CLINIQUE商品">CLINIQUE</a>
+            </div>
+            <div class="logo-block bottom phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多BIOTHERM商品">BIOTHERM</a>
+            </div>
+            <div class="logo-block bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多Elizabeth Arden商品">Elizabeth Arden</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+          <!-- 品牌一覽跳出視窗 -->
+          <div class="modal">
+            <div class="remove"><img src="images/mcross.png"></div>
+            <div class="title">品牌一覽</div>
+            <div class="category">
+              <div class="subtitle">化妝品</div>
+              <div class="tag">
+                <a href="javascript:void(0)" class="modal-button">SHISEIDO</a>
+                <a href="javascript:void(0)" class="modal-button">伊聖詩</a>
+                <a href="javascript:void(0)" class="modal-button">SHISEIDO</a>
+                <a href="javascript:void(0)" class="modal-button">伊聖詩</a>
+                <a href="javascript:void(0)" class="modal-button">SHISEIDO</a>
+                <a href="javascript:void(0)" class="modal-button">伊聖詩</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 化妝品產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【BOBBI BROWN】持久完美底妝組</div>
+                    <span class="Price_all">特價<b class="Price">3500</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【GLAMGLOW】無重力瞬效緊實面膜</div>
+                    <span class="Price_all">特價<b class="Price">2000</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【KOSE】無限肌緻 極效煥白淡斑筆4g</div>
+                    <span class="Price_all">特價<b class="Price">2300</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【LANCOME】超緊顏5D太空抗皺精露200ml</div>
+                    <span class="Price_all">特價<b class="Price">2400</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【SK-II】亮采化妝水 160ml</div>
+                    <span class="Price_all">特價<b class="Price">2052</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor1/product.jpg" border="0" alt="">
+                    <div class="Ceud">【宏亞香水】VERSACE經典男性淡香水+摩登梅杜莎束口後背包</div>
+                    <span class="Price_all">特價<b class="Price">1960</b></span>
+                </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 名品形象大圖 -->
+    <div class="visualization" style="background-image: url('images/floor2/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 名品 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor2-image" style="background-image: url('images/floor2/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="fashions" data-index="sj&j f.pops gloria fashion library clay derman bo derek magy ben&1966"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor2/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">02</div>
+          <div class="title-name">名品</div>
+          <div class="tag">
+            <span>不只是精品購物，也是時尚品味，更是生活藝術！</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">International Fashions</div>
+          <div class="logo three-logo">
+            <div class="logo-block left bottom no-bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多SJ&J商品">SJ&J</a>
+            </div>
+            <div class="logo-block phone-left bottom no-bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多F.POPS商品">F.POPS</a>
+            </div>
+            <div class="logo-block phone-left bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多Gloria商品">Gloria</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+        </div>
+      </div>
+      <!-- 名品產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+            
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【MAGY】釦飾包鞋</div>
+                    <span class="Price_all">特價<b class="Price">1680</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Clay Derman】菱格紋厚底鞋</div>
+                    <span class="Price_all">特價<b class="Price">2990</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Fashion Library】Bag all</div>
+                    <span class="Price_all">特價<b class="Price">550</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Bo Derek】珍珠厚底休閒鞋</div>
+                    <span class="Price_all">特價<b class="Price">3200</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【SJ&J】8吋英國原裝牛皮磁扣劍橋包</div>
+                    <span class="Price_all">特價<b class="Price">3900</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor2/product.jpg" border="0" alt="">
+                    <div class="Ceud">【BEN&amp;1966】刺繡方頭包鞋</div>
+                    <span class="Price_all">特價<b class="Price">3280</b></span>
+                </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 服飾形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor3/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 服飾 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor3-image" style="background-image: url('images/floor3/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="clothing" 
+         data-index="the89 playboy cumar lacheln mestiere deas 奧黛莉 lesportsac kila bloom california republic 瑰珀翠 river woods"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor3/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">03</div>
+          <div class="title-name">服飾/配件</div>
+          <div class="tag">
+            <span>打造屬於您的風格時尚，以新衣喚醒沉睡已久心情</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">Clothing & Accessories</div>
+          <div class="logo">
+            <div class="logo-block left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多THE89商品">THE89</a>
+            </div>
+            <div class="logo-block">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多PLAYBOY商品">PLAYBOY</a>
+            </div>
+            <div class="logo-block phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多CUMAR商品">CUMAR</a>
+            </div>
+            <div class="logo-block left bottom no-bottom no-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多LACHELN商品">LACHELN</a>
+            </div>
+            <div class="logo-block bottom phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多MESTIERE DEAS商品">MESTIERE DEAS</a>
+            </div>
+            <div class="logo-block bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多奧黛莉商品">奧黛莉</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+        </div>
+      </div>
+      <!-- 服飾產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【LeSportsac】經典斜背包</div>
+                    <span class="Price_all">特價<b class="Price">2600</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【BLOOM】精選造型耳環 (四選一)</div>
+                    <span class="Price_all">特價<b class="Price">888</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【瑰珀翠】香水柔嫩皂185g五入 贈瀝水皂盤</div>
+                    <span class="Price_all">特價<b class="Price">1100</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【kila kila】925純銀項鍊+耳環</div>
+                    <span class="Price_all">特價<b class="Price">790</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【California Republic】休閒短褲</div>
+                    <span class="Price_all">特價<b class="Price">1608</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor3/product.jpg" border="0" alt="">
+                    <div class="Ceud">【RIVER WOODS】氣質出眾上衣</div>
+                    <span class="Price_all">特價<b class="Price">3766</b></span>
+                </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 男裝形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor4/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 男裝 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor4-image" style="background-image: url('images/floor4/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="sport" 
+         data-index="crocodile native 斐利 k-swiss bag to you cumar camel active goodforit native onitsuka tiger brooks river woods"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor4/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">04</div>
+          <div class="title-name">男裝/休運</div>
+          <div class="tag">
+            <span>玩美機能時尚，陪您輕鬆打造完美曲線</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">Men & Sport</div>
+          <div class="logo">
+            <div class="logo-block left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多Crocodile商品">Crocodile</a>
+            </div>
+            <div class="logo-block">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多Native商品">Native</a>
+            </div>
+            <div class="logo-block phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多斐利商品">斐利</a>
+            </div>
+            <div class="logo-block left bottom no-bottom no-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多K-SWISS商品">K-SWISS</a>
+            </div>
+            <div class="logo-block bottom phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多BAG TO YOU商品">BAG TO YOU</a>
+            </div>
+            <div class="logo-block bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多CUMAR商品">CUMAR</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+        </div>
+      </div>
+      <!-- 男裝產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+          
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【BROOKS】男款Ravenna 8慢跑鞋</div>
+                    <span class="Price_all">特價<b class="Price">2990</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Native】女款Juliet防水涼鞋</div>
+                    <span class="Price_all">特價<b class="Price">1602</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Onitsuka Tiger】男女款MEXICO 66 SD復古休閒鞋</div>
+                    <span class="Price_all">特價<b class="Price">3120</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【camel active】休閒襯衫</div>
+                    <span class="Price_all">特價<b class="Price">4186</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【goodforit】Copacetic Grooming Pomade絕代柑橘高定型水性髮油</div>
+                    <span class="Price_all">特價<b class="Price">780</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor4/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Native】中性PALMER 朝聖拖</div>
+                    <span class="Price_all">特價<b class="Price">1680</b></span>
+                </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 親子形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor5/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 親子 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor5-image" style="background-image: url('images/floor5/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="kids" 
+         data-index="施巴 f`ees 奇哥 麗嬰房 聖荃 native"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor5/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">05</div>
+          <div class="title-name">婦幼親子</div>
+          <div class="tag">
+            <span>時刻溫柔守護媽咪寶貝，豐富您的親子生活</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">Kids & Baby</div>
+          <div class="logo three-logo">
+            <div class="logo-block left bottom no-bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多施巴商品">施巴</a>
+            </div>
+            <div class="logo-block phone-left bottom no-bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多F`ees商品">F`ees</a>
+            </div>
+            <div class="logo-block phone-left bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多奇哥商品">奇哥</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+        </div>
+      </div>
+      <!-- 親子產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+          
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【麗嬰房】費雪聲光安撫海馬</div>
+                    <span class="Price_all">特價<b class="Price">599</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【聖荃】Hello Kitty帆布休閒鞋</div>
+                    <span class="Price_all">特價<b class="Price">690</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【麗嬰房】Combi 小熊好朋友音樂布偶</div>
+                    <span class="Price_all">特價<b class="Price">1080</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【聖荃】Hello Kitty可愛帆布鞋</div>
+                    <span class="Price_all">特價<b class="Price">980</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【施巴】蝴蝶經典五件禮盒</div>
+                    <span class="Price_all">特價<b class="Price">1420</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor5/product.jpg" border="0" alt="">
+                    <div class="Ceud">【Native】兒童CORNELL CHILD 小康奈</div>
+                    <span class="Price_all">特價<b class="Price">1480</b></span>
+                </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 家用形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor6/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 家用 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor6-image" style="background-image: url('images/floor6/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="homeneeds" 
+         data-index="佳醫 伊萊克斯 tescom 生活工場 虎牌 象印 均岱 鼎王鵝媽媽 嘉儀 inhouse 1929比得兔"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor6/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">06</div>
+          <div class="title-name">3C/家用</div>
+          <div class="tag">
+            <span>打造智慧生活，為您的科技生活添加與眾不同的美感</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">3C & HOME NEEDS</div>
+          <div class="logo">
+            <div class="logo-block left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多佳醫商品">佳醫</a>
+            </div>
+            <div class="logo-block">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多伊萊克斯商品">伊萊克斯</a>
+            </div>
+            <div class="logo-block phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多TESCOM商品">TESCOM</a>
+            </div>
+            <div class="logo-block left bottom no-bottom no-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多生活工場商品">生活工場</a>
+            </div>
+            <div class="logo-block bottom phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多虎牌商品">虎牌</a>
+            </div>
+            <div class="logo-block bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多象印商品">象印</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+        </div>
+      </div>
+      <!-- 家用產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【嘉儀】JASMINE香氛機</div>
+                    <span class="Price_all">特價<b class="Price">1701</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【生活工場】Doshisha MOSH牛奶罐保溫壺(1L)三色擇一</div>
+                    <span class="Price_all">特價<b class="Price">1380</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【均岱】DANSK珂本琺瑯雙耳湯鍋6L-湖水綠</div>
+                    <span class="Price_all">特價<b class="Price">3600</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【鼎王鵝媽媽】鵝媽媽藍寶不沾鍋30cm</div>
+                    <span class="Price_all">特價<b class="Price">2680</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【inhouse】精梳棉涼被</div>
+                    <span class="Price_all">特價<b class="Price">1000</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor6/product.jpg" border="0" alt="">
+                    <div class="Ceud">【1929比得兔】森林之歌棉麻四季被</div>
+                    <span class="Price_all">特價<b class="Price">2850</b></span>
+                </a>
+            </div>
+                                        
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+    <!-- 食品形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor7/big_picture.jpg')"></div>
+  </div>
+
+  <!-- 食品 -->
+  <div class="floor">
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+      <div class="floor-images floor7-image" style="background-image: url('images/floor7/big_picture.jpg')"></div>
+    </div>
+    <!-- TAG -->
+    <div class="spacer" id="food" 
+         data-index="jasons 美珍香 老行家 黑橋牌 手信坊 阿華師 華齊堂 味芝坊 zealong 蜜堂"></div>
+    <div class="sort">
+      <div class="sort-image"><img src="images/floor7/image.jpg"></div>
+      <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+          <div class="umber">07</div>
+          <div class="title-name">食品/Jasons</div>
+          <div class="tag">
+            <span>品味時尚購物市場，提供當季蔬果、肉品新鮮食材與嚴選食品</span>
+          </div>
+        </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+          <div class="font">FOOD & JASONS</div>
+          <div class="logo">
+            <div class="logo-block left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多JASONS商品">JASONS</a>
+            </div>
+            <div class="logo-block">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多美珍香商品">美珍香</a>
+            </div>
+            <div class="logo-block phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多老行家商品">老行家</a>
+            </div>
+            <div class="logo-block left bottom no-bottom no-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多黑橋牌商品">黑橋牌</a>
+            </div>
+            <div class="logo-block bottom phone-left">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多手信坊商品">手信坊</a>
+            </div>
+            <div class="logo-block bottom">
+              <div class="logo-line"></div>
+              <a href="javascript:void(0)" title="更多阿華師商品">阿華師</a>
+            </div>
+          </div>
+          <!-- 品牌一覽按鈕 -->
+          <div class="button brand-list"><a href="javascript:void(0)">更多商品</a></div>
+          <!-- 品牌一覽跳出視窗 -->
+          <div class="modal">
+            <div class="remove"><img src="images/mcross.png"></div>
+            <div class="title">品牌一覽</div>
+            <div class="category">
+              <div class="subtitle">食品/Jasons</div>
+              <div class="tag">
+                <a href="javascript:void(0)" class="modal-button">美珍香</a>
+                <a href="javascript:void(0)" class="modal-button">阿華師</a>
+                <a href="javascript:void(0)" class="modal-button">美珍香</a>
+                <a href="javascript:void(0)" class="modal-button">阿華師</a>
+                <a href="javascript:void(0)" class="modal-button">美珍香</a>
+                <a href="javascript:void(0)" class="modal-button">阿華師</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 食品產品 -->
+      <div class="product-block">
+        <div class="commodity">
+          <div class="slick-block">
+          
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【華齊堂】好姐妹美人四物飲(60ml*30入)</div>
+                    <span class="Price_all">特價<b class="Price">1755</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【老行家】珍珠粉禮盒(120入裝)</div>
+                    <span class="Price_all">特價<b class="Price">2280</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【味芝坊】肉紙-黑胡椒</div>
+                    <span class="Price_all">特價<b class="Price">220</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【ZEALONG】清香烏龍茶精裝 60g</div>
+                    <span class="Price_all">特價<b class="Price">1780</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【阿華師】黃金超油切冷泡綠茶18入</div>
+                    <span class="Price_all">特價<b class="Price">203</b></span>
+                </a>
+            </div>
+            <div class="block">
+                <a href="javascript:void(0)">
+                    <img class="_img" src="images/floor7/product.jpg" border="0" alt="">
+                    <div class="Ceud">【蜜堂】蜂蜜抹醬組（160g＊3入）</div>
+                    <span class="Price_all">特價<b class="Price">600</b></span>
+                </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="commodity-line"></div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+  <!-- 運用在區塊出現 -->
+  <script src="js/wow.js" type="text/javascript"></script>
+  <!-- 滑動效果 -->
+  <script src="js/slick.js" type="text/javascript"></script>
+  <!-- 主要 -->
+  <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
